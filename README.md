@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/testingbot/Python-Pytest-Selenium.svg?branch=master)](https://travis-ci.org/testingbot/Python-Pytest-Selenium)
+[![Build Status](https://travis-ci.org/testingbot/Python-PyTest-Selenium.svg?branch=master)](https://travis-ci.org/testingbot/Python-PyTest-Selenium)
 
 ## TestingBot - Python & PyTest
 
