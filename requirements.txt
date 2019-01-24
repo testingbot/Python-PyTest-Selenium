@@ -1,4 +1,2 @@
 selenium>=2.5
 pytest
-pytest-xdist
-requests
