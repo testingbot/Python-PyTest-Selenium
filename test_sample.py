@@ -5,5 +5,5 @@ import pytest
 class TestSample:
 
     def test_sample(self, driver):
-        driver.get('https://www.google.com/ncr')
-        assert "Google" == driver.title
+        driver.get('https://testingbot.com')
+        assert 'TestingBot' in driver.title

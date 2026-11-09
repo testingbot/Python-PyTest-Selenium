@@ -1,17 +1,20 @@
-[![Build Status](https://travis-ci.org/testingbot/Python-PyTest-Selenium.svg?branch=master)](https://travis-ci.org/testingbot/Python-PyTest-Selenium)
-
 ## TestingBot - Python & PyTest
 
-TestingBot provides an online grid of browsers and mobile devices to run Automated tests on via Selenium WebDriver.
-This example demonstrates how to use Python with PyTest to run tests across several browsers.
+TestingBot provides an online grid of browsers and mobile devices to run automated tests on via Selenium WebDriver.
+This example demonstrates how to use Python with [pytest](https://docs.pytest.org/) and [pytest-selenium](https://pytest-selenium.readthedocs.io/) to run tests on TestingBot.
+
+### Requirements
+
+* Python 3.9 or newer
 
 ### Environment Setup
+
 1. Setup
     * Clone the repo
-    * Install the dependencies `pip install -r requirements.txt`
+    * Install the dependencies: `pip install -r requirements.txt`
 
 2. TestingBot Credentials
-    * Add your TestingBot Key and Secret as environmental variables. You can find these in the [TestingBot Dashboard](https://testingbot.com/members/).
+    * Add your TestingBot Key and Secret as environment variables. You can find these in the [TestingBot Dashboard](https://testingbot.com/members/).
     ```
     $ export TESTINGBOT_KEY=<your TestingBot Key>
     $ export TESTINGBOT_SECRET=<your TestingBot Secret>
@@ -23,11 +26,20 @@ This example demonstrates how to use Python with PyTest to run tests across seve
     ```
     $ pytest test_sample.py
     ```
-You will see the test result in the [TestingBot Dashboard](https://testingbot.com/members/)
+
+`pytest.ini` selects the TestingBot driver and the browser (latest Chrome on Windows 11).
+To use another browser, override a capability on the command line:
+
+```
+$ pytest test_sample.py --capability browserName firefox
+```
+
+pytest-selenium marks each test as passed or failed on TestingBot and prints a link to the test.
+You will see the test result in the [TestingBot Dashboard](https://testingbot.com/members/).
 
 ### Resources
 ##### [TestingBot Documentation](https://testingbot.com/support/)
 
-##### [SeleniumHQ Documentation](http://www.seleniumhq.org/docs/)
+##### [Selenium Documentation](https://www.selenium.dev/documentation/)
 
-##### [PyTest Documentation](https://pytest-selenium.readthedocs.io/en/latest/index.html)
+##### [pytest-selenium Documentation](https://pytest-selenium.readthedocs.io/en/latest/index.html)
